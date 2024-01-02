@@ -614,10 +614,6 @@ static void updateMenuFromGameList(opl_io_module_t *mdl)
     if (gRememberLastPlayed)
         configGetStr(configGetByType(CONFIG_LAST), "last_played", &temp);
 
-    // refresh device icon and text (for bdm)
-    mdl->menuItem.icon_id = mdl->support->itemIconId();
-    mdl->menuItem.text_id = mdl->support->itemTextId();
-
     // read the new game list
     struct gui_update_t *gup = NULL;
     int count = mdl->support->itemUpdate();
@@ -643,6 +639,10 @@ static void updateMenuFromGameList(opl_io_module_t *mdl)
 
             guiDeferUpdate(gup);
         }
+        // refresh device icon and text
+        mdl->support->total_items = i;
+        mdl->menuItem.icon_id = mdl->support->itemIconId();
+        mdl->menuItem.text_id = mdl->support->itemTextId();
     }
 
     if (gAutosort) {
