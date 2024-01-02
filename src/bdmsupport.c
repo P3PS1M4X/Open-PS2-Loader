@@ -510,6 +510,14 @@ static int bdmGetIconId(void)
     return mode;
 }
 
+static char *bdmGetTotalItems(void)
+{
+    char items[128];
+    sprintf(items, sizeof(items), "%d Games", bdmGameList->total_items);
+
+    return items;
+}
+
 // This may be called, even if bdmInit() was not.
 static void bdmCleanUp(int exception)
 {
