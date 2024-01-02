@@ -78,6 +78,7 @@ enum ERROR_CODE {
 typedef struct
 {
     short int mode;
+    int total_items;
 
     /// Device priority when it comes to locating art assets for apps. Higher value = lower priority. (< 0) means no support for art assets.
     char appsPriority;
