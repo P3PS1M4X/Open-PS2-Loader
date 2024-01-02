@@ -601,11 +601,11 @@ gui_strings:
 - label: HINT_BLOCK_DEVICES
   string: Turn on/off Block Devices (e.g. USB).
 - label: USB_GAMES
-  string: USB Games
+  string: USB Games (%d Games)
 - label: ILINK_GAMES
-  string: iLink Games
+  string: iLink Games (%d Games)
 - label: MX4SIO_GAMES
-  string: MX4SIO Games
+  string: MX4SIO Games (%d Games)
 - label: PADMACROCONFIG
   string: Configure PADMACRO
 - label: PADMACRO_SETTINGS
